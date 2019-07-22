@@ -94,7 +94,7 @@ String originalPayloadString = "mysupersecretpayload";
 byte[] dataRowRecordBytes = appEncryptionBytes.encrypt(originalPayloadString.getBytes(StandardCharsets.UTF_8));
 
 // decrypt the payload
-String decryptedPayloadString = new String(appEncryptionBytes.decrypt(newBytes), StandardCharsets.UTF_8);
+String decryptedPayloadString = new String(appEncryptionBytes.decrypt(dataRowRecordBytes), StandardCharsets.UTF_8);
 ```
 
 #### Store / Load
